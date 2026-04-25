@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio — Quest Log</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323:wght@400&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+ <div id="bgm-toggle" class="bgm-switch">
+  <div class="bgm-track">
+    <div class="bgm-thumb"></div>
+  </div>
+  <span class="bgm-label">BGM</span>
+</div>
+
+<!-- ─── NAV ─── -->
+<nav>
+  <div class="nav-logo">⚔ MY PORTFOLIO</div>
+  <ul class="nav-links">
+    <li><a href="#" onclick="enterPage('home')" id="nav-home" class="active">HOME</a></li>
+    <li><a href="#" onclick="enterPage('intro')" id="nav-intro">INTRO</a></li>
+    <li><a href="#" onclick="enterPage('midterm')" id="nav-midterm">MIDTERM</a></li>
+    <li><a href="#" onclick="enterPage('multimedia')" id="nav-multimedia">MULTIMEDIA</a></li>
+    <li><a href="#" onclick="enterPage('final')" id="nav-final">FINAL</a></li>
+    <li><a href="#" onclick="enterPage('contact')" id="nav-contact">CONTACT</a></li>
+  </ul>
+</nav>
+
+
+<div id="questModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeBtn">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <pre id="modalCode"></pre>
+    <p id="modalReflection"></p>
+  </div>
+</div>
+
+<div id="itemModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeItem()">&times;</span>
+    <h2 id="itemTitle"></h2>
+    <iframe id="itemViewer"></iframe>
+    <p id="itemReflection"></p>
+    <a id="itemDownload" target="_blank">⬇ Download</a>
+  </div>
+</div>
+
+
+<!-- ─── HOME PAGE ─── -->
+<div class="page active" id="page-home">
+  <div class="home-content">
+    <!-- Pixel character SVG -->
+    <svg class="big-char" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="width:96px;height:96px;image-rendering:pixelated;">
+      <!-- body -->
+      <rect x="11" y="14" width="10" height="10" fill="#7c3aed"/>
+      <!-- head -->
+      <rect x="10" y="5" width="12" height="11" fill="#fbbf24"/>
+      <!-- eyes -->
+      <rect x="12" y="8" width="2" height="2" fill="#1a1a35"/>
+      <rect x="18" y="8" width="2" height="2" fill="#1a1a35"/>
+      <!-- mouth -->
+      <rect x="13" y="12" width="6" height="1" fill="#1a1a35"/>
+      <rect x="12" y="11" width="1" height="1" fill="#1a1a35"/>
+      <rect x="19" y="11" width="1" height="1" fill="#1a1a35"/>
+      <!-- hair -->
+      <rect x="10" y="4" width="12" height="3" fill="#78350f"/>
+      <rect x="9" y="5" width="2" height="4" fill="#78350f"/>
+      <rect x="21" y="5" width="2" height="4" fill="#78350f"/>
+      <!-- legs -->
+      <rect x="11" y="24" width="4" height="5" fill="#1e40af"/>
+      <rect x="17" y="24" width="4" height="5" fill="#1e40af"/>
+      <!-- arms -->
+      <rect x="7" y="14" width="4" height="3" fill="#7c3aed"/>
+      <rect x="21" y="14" width="4" height="3" fill="#7c3aed"/>
+      <!-- shoes -->
+      <rect x="10" y="29" width="5" height="2" fill="#1a1a35"/>
+      <rect x="17" y="29" width="5" height="2" fill="#1a1a35"/>
+      <!-- cape -->
+      <rect x="8" y="14" width="3" height="8" fill="#dc2626" opacity="0.8"/>
+      <rect x="21" y="14" width="3" height="8" fill="#dc2626" opacity="0.8"/>
+    </svg>
+
+    
+
+    <div class="title-card">
+      <div class="game-title">WELCOME TO MY<br>PORTFOLIO QUEST</div>
+      <span class="game-subtitle">─── John Wayne Carl P. Aguio, BSIT 2 - 3 ───</span>
+      <div style="margin-bottom:1.5rem;color:var(--muted);font-size:10px;line-height:1.6;font-family: var(--pixel);">
+        This e-portfolio presents my Midterm Project in Object-Oriented Programming using tech stack (HTML, CSS, JS). It
+        includes quizzes, activities, and exams that demonstrate my understanding of OOP concepts.
+      </div>
+      <button class="start-btn" onclick="showPage('intro')">▶ BEGIN QUEST</button>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-box">
+        <span class="stat-label">LEVEL</span>
+        <div class="stat-val">03</div>
+      </div>
+      <div class="stat-box">
+        <span class="stat-label">PROJECTS</span>
+        <div class="stat-val">10</div>
+      </div>
+      <div class="stat-box">
+        <span class="stat-label">XP</span>
+        <div class="stat-val">167</div>
+      </div>
+      <div class="stat-box">
+        <span class="stat-label">CLASS</span>
+        <div class="stat-val" style="font-size:18px;">DEV</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── INTRO PAGE ─── -->
+<div class="page" id="page-intro">
+  <div class="page-header">
+    CHARACTER PROFILE
+    <span>// Introduction & Background</span>
+  </div>
+  <div class="intro-grid">
+    <div>
+      <div class="profile-card">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="width:80px;height:80px;image-rendering:pixelated;">
+          <rect x="11" y="14" width="10" height="10" fill="#7c3aed"/>
+          <rect x="10" y="5" width="12" height="11" fill="#fbbf24"/>
+          <rect x="12" y="8" width="2" height="2" fill="#1a1a35"/>
+          <rect x="18" y="8" width="2" height="2" fill="#1a1a35"/>
+          <rect x="13" y="12" width="6" height="1" fill="#1a1a35"/>
+          <rect x="12" y="11" width="1" height="1" fill="#1a1a35"/>
+          <rect x="19" y="11" width="1" height="1" fill="#1a1a35"/>
+          <rect x="10" y="4" width="12" height="3" fill="#78350f"/>
+          <rect x="9" y="5" width="2" height="4" fill="#78350f"/>
+          <rect x="21" y="5" width="2" height="4" fill="#78350f"/>
+          <rect x="11" y="24" width="4" height="5" fill="#1e40af"/>
+          <rect x="17" y="24" width="4" height="5" fill="#1e40af"/>
+          <rect x="7" y="14" width="4" height="3" fill="#7c3aed"/>
+          <rect x="21" y="14" width="4" height="3" fill="#7c3aed"/>
+          <rect x="10" y="29" width="5" height="2" fill="#1a1a35"/>
+          <rect x="17" y="29" width="5" height="2" fill="#1a1a35"/>
+        </svg>
+        <span class="profile-name">JOHN WAYNE CARL P. AGUIO</span>
+        <span class="profile-class">⚔ COMP 007 Object Oriented Programming</span>
+        <div style="text-align:left;margin-top:0.8rem;">
+          <div class="bar-label"><span>HP</span><span>95/100</span></div>
+          <div class="hp-bar"><div class="hp-fill" style="width:95%"></div></div>
+          <div class="bar-label" style="margin-top:6px;"><span>MP</span><span>80/100</span></div>
+          <div class="hp-bar"><div class="hp-fill mp-fill" style="width:80%"></div></div>
+        </div>
+        <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:4px;justify-content:center;">
+          <span class="skill-tag">JAVA</span>
+          <span class="skill-tag">OOP CONCEPTS</span>
+          <span class="skill-tag">BACKBURNER</span>
+          <span class="skill-tag">OPTION</span>
+          <span class="skill-tag">CRITICAL THINKING</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-panel">
+      <h3>▶ ABOUT ME</h3>
+      <p>Hello, adventurer! I'm Wayne! 2nd year BSIT student at PUP Manila. I am very curious person! i put pure passion in everything i do!!!</p>
+      <p>I love exploring new technologies, do something silly, and learning something new every day on this never-ending journey.</p>
+
+      <h3>▶ MY ORIGIN STORY</h3>
+      <p>Born and raised with curiosity as my greatest weapon, I've always been drawn to the technology. I enrolled in this course to level up my  skills and bring my curiosity visions to life.</p>
+
+      <h3>▶ EQUIPMENT & SKILLS</h3>
+      <p>My toolkit includes the basic foundation, critical thinking, understanding, and a healthy dose of imagination. Every project is a new quest waiting to be conquered.</p>
+
+      <h3>▶ CURRENT QUEST</h3>
+      <p>Completing my OOP subject with passion, building an impressive portfolio, and one day crafting digital experiences that inspire others.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ─── MIDTERM PAGE ─── -->
+<div class="page" id="page-midterm">
+  <div class="page-header">
+    MIDTERM QUEST LOG
+    <span>// Java Programming Journey</span>
+  </div>
+
+  <div class="xp-bar">
+  <div class="xp-fill"></div>
+  <div class="xp-text">XP: 67 / 100</div>
+</div>
+
+  <div class="midterm-boxes">
+
+    <div class="category-box">
+      <div class="category-title">📘 ACTIVITIES</div>
+      <div class="quest-card" onclick="openQuest('variables')">Activity #1</div>
+      <div class="quest-card" onclick="openQuest('operators')">Activity #2</div>
+      <div class="quest-card" onclick="openQuest('atm')">Activity #3</div>
+      <div class="quest-card" onclick="openQuest('scholarship')">Activity #4</div>
+      <div class="quest-card" onclick="openQuest('expense')">Activity #5</div>
+    </div>
+
+    <div class="category-box">
+      <div class="category-title">🧪 SEATWORKS</div>
+      <div class="quest-card" onclick="openQuest('seatwork1')">Seatwork #1</div>
+      <div class="quest-card" onclick="openQuest('wallet')">Seatwork #2</div>
+      <div class="quest-card" onclick="openQuest('age')">Seatwork #3</div>
+    </div>
+
+    <div class="category-box">
+      <div class="category-title">📝 QUIZ</div>
+      <div class="quest-card" onclick="openQuest('quiz1')">Midterm Quiz #1</div>
+    </div>
+
+    <div class="category-box">
+      <div class="category-title">📂 ASSIGNMENT</div>
+      <div class="quest-card" onclick="openQuest('assignment1')">Assignment #1</div>
+    </div>
+    </div>
+</div>
+
+<!-- ─── MULTIMEDIA ARMORY (FIXED STRUCTURE) ─── -->
+<div class="page" id="page-multimedia">
+
+  <div class="page-header">
+    ARMORY DATABASE
+    <span>// Classified Digital Equipment</span>
+  </div>
+
+  <div class="armory-center">
+
+    <div class="armory-panel">
+
+      <!-- LEFT TABS -->
+      <div class="armory-tabs">
+        <div class="armory-tab active" onclick="showArmory('activities', this)">⚔ ACTIVITIES</div>
+        <div class="armory-tab" onclick="showArmory('seatworks', this)">🛡 SEATWORKS</div>
+        <div class="armory-tab" onclick="showArmory('quizzes', this)">📜 QUIZZES</div>
+        <div class="armory-tab" onclick="showArmory('assignments', this)">📦 ASSIGNMENTS</div>
+      </div>
+
+      <!-- RIGHT CONTENT (FIXED LAYOUT) -->
+      <div class="armory-content">
+
+        <!-- TITLE -->
+        <div id="armory-title" class="armory-section-title">
+          ⚔ Activities Arsenal
+        </div>
+
+        <!-- ITEMS -->
+        <div id="armory-items">
+
+          <!-- DEFAULT 5 ACTIVITIES -->
+          <div class="armory-item" onclick="openItem({
+            title: 'Activity #1 - Variables',
+            file: 'files/BSIT%202-3_Aguio_John_Wayne_Carl_CodeAnalysisActivity%231.pdf',
+            reflection: 'Learned variables and data storage.'
+          })">
+            <div class="item-icon">⚔</div>
+            <div class="item-info">
+              <div class="item-name">Activity #1</div>
+              <div class="item-desc">Variables</div>
+            </div>
+          </div>
+
+          <div class="armory-item" onclick="openItem({
+            title: 'Activity #2 - Operators',
+            file: 'files/BSIT%202-3_Aguio_John_Wayne_Carl_OperatorsActivity%232.pdf',
+            reflection: 'Learned Java operators.'
+          })">
+            <div class="item-icon">⚔</div>
+            <div class="item-info">
+              <div class="item-name">Activity #2</div>
+              <div class="item-desc">Operators</div>
+            </div>
+          </div>
+
+          <div class="armory-item" onclick="openItem({
+            title: 'Activity #3 - ATM System',
+            file: 'files/2-3_AGUIO_JOHN%20WAYNE%20CARL%20P._BasicATMSystem.pdf',
+            reflection: 'Used switch and loops.'
+          })">
+            <div class="item-icon">⚔</div>
+            <div class="item-info">
+              <div class="item-name">Activity #3</div>
+              <div class="item-desc">ATM System</div>
+            </div>
+          </div>
+
+          <div class="armory-item" onclick="openItem({
+            title: 'Activity #4 - Scholarship System',
+            file: 'files/2-3_AGUIO_JOHN%20WAYNE%20CARL%20P._Student%20Enrollment%20Assessment%20System.pdf',
+            reflection: 'Applied decision making.'
+          })">
+            <div class="item-icon">⚔</div>
+            <div class="item-info">
+              <div class="item-name">Activity #4</div>
+              <div class="item-desc">Scholarship System</div>
+            </div>
+          </div>
+
+          <div class="armory-item" onclick="openItem({
+            title: 'Activity #5 - Expense Tracker',
+            file: 'files/ExpenseTrackerAguio.pdf',
+            reflection: 'Used methods and functions.'
+          })">
+            <div class="item-icon">⚔</div>
+            <div class="item-info">
+              <div class="item-name">Activity #5</div>
+              <div class="item-desc">Expense Tracker</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ─── FINAL PAGE ─── -->
+<div class="page" id="page-final">
+  <div class="page-header">
+    FINAL CHAPTER
+    <span>// Coming Soon</span>
+  </div>
+  <div class="coming-soon">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="width:80px;height:80px;image-rendering:pixelated;opacity:0.5;">
+      <rect x="11" y="14" width="10" height="10" fill="#7c3aed"/>
+      <rect x="10" y="5" width="12" height="11" fill="#fbbf24"/>
+      <rect x="12" y="8" width="2" height="2" fill="#1a1a35"/>
+      <rect x="18" y="8" width="2" height="2" fill="#1a1a35"/>
+      <rect x="13" y="12" width="6" height="1" fill="#1a1a35"/>
+      <rect x="10" y="4" width="12" height="3" fill="#78350f"/>
+      <rect x="9" y="5" width="2" height="4" fill="#78350f"/>
+      <rect x="21" y="5" width="2" height="4" fill="#78350f"/>
+      <rect x="11" y="24" width="4" height="5" fill="#1e40af"/>
+      <rect x="17" y="24" width="4" height="5" fill="#1e40af"/>
+      <rect x="7" y="14" width="4" height="3" fill="#7c3aed"/>
+      <rect x="21" y="14" width="4" height="3" fill="#7c3aed"/>
+      <rect x="10" y="29" width="5" height="2" fill="#1a1a35"/>
+      <rect x="17" y="29" width="5" height="2" fill="#1a1a35"/>
+    </svg>
+    <div class="cs-label">CHAPTER LOCKED</div>
+    <div style="font-family:var(--mono),monospace;font-size:22px;color:var(--muted);">This area is under construction...</div>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-fill"></div>
+    </div>
+    <div style="font-family:var(--pixel),monospace;font-size:7px;color:var(--muted);">45% COMPLETE</div>
+    <div style="font-size:14px;color:var(--muted);max-width:400px;text-align:center;line-height:1.6;">
+      The final chapter is being written. Check back soon to see the conclusion of this portfolio quest!
+    </div>
+  </div>
+</div>
+
+<!-- ─── CONTACT PAGE ─── -->
+<div class="page" id="page-contact">
+  <div class="page-header">
+    SEND A MESSAGE
+    <span>// Contact & Visitor Notes</span>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-form">
+      <div style="font-family:var(--pixel),monospace;font-size:8px;color:var(--gold);margin-bottom:1.2rem;">📨 CONTACT FORM</div>
+      <div class="form-group">
+        <label class="form-label">YOUR NAME</label>
+        <input type="text" class="form-input" id="c-name" placeholder="Enter your name...">
+      </div>
+      <div class="form-group">
+        <label class="form-label">EMAIL ADDRESS</label>
+        <input type="email" class="form-input" id="c-email" placeholder="your@email.com">
+      </div>
+      <div class="form-group">
+        <label class="form-label">MESSAGE</label>
+        <textarea class="form-input" id="c-msg" placeholder="Write your message here..."></textarea>
+      </div>
+      <button class="submit-btn" onclick="sendContact()">▶ SEND MESSAGE</button>
+
+      <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);">
+        <div style="font-family:var(--pixel),monospace;font-size:7px;color:var(--muted);margin-bottom:0.8rem;">FIND ME AT</div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <div style="font-size:13px;color:var(--muted);">📧 wj1507398@gmail.com</div>
+          <div style="font-size:13px;color:var(--muted);">🐦 @wynhshshs on ig</div>
+          <div style="font-size:13px;color:var(--muted);">💼 linkedin.com/in/wayne-aguio/</div>
+          <div style="font-size:13px;color:var(--muted);">🐙 https://github.com/Wayne-Aguio</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STICKY NOTES -->
+    <div class="sticky-section">
+      <div class="sticky-header">📌 VISITOR NOTES BOARD</div>
+      <div style="font-size:13px;color:var(--muted);margin-bottom:1rem;">Leave a sticky note for the world to see!</div>
+
+      <div class="sticky-input-row">
+        <input type="text" class="form-input" id="s-name" placeholder="Your name..." style="font-size:13px;">
+        <textarea class="form-input" id="s-note" placeholder="Write your note..." style="min-height:70px;font-size:13px;resize:none;"></textarea>
+        <button class="submit-btn" onclick="addNote()" style="margin-top:0;">📌 PIN NOTE</button>
+      </div>
+
+      <div class="sticky-notes-wall" id="notes-wall">
+        <!-- default notes -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── DIALOG BOX ─── -->
+<div class="dialog-wrapper" id="dialog-wrapper">
+  <div class="dialog-box">
+    <div class="dialog-header">
+      <svg class="char-sprite" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="width:48px;height:48px;image-rendering:pixelated;">
+        <rect x="11" y="14" width="10" height="10" fill="#7c3aed"/>
+        <rect x="10" y="5" width="12" height="11" fill="#fbbf24"/>
+        <rect x="12" y="8" width="2" height="2" fill="#1a1a35"/>
+        <rect x="18" y="8" width="2" height="2" fill="#1a1a35"/>
+        <rect x="13" y="12" width="6" height="1" fill="#1a1a35"/>
+        <rect x="12" y="11" width="1" height="1" fill="#1a1a35"/>
+        <rect x="19" y="11" width="1" height="1" fill="#1a1a35"/>
+        <rect x="10" y="4" width="12" height="3" fill="#78350f"/>
+        <rect x="9" y="5" width="2" height="4" fill="#78350f"/>
+        <rect x="21" y="5" width="2" height="4" fill="#78350f"/>
+        <rect x="11" y="24" width="4" height="5" fill="#1e40af"/>
+        <rect x="17" y="24" width="4" height="5" fill="#1e40af"/>
+        <rect x="7" y="14" width="4" height="3" fill="#7c3aed"/>
+        <rect x="21" y="14" width="4" height="3" fill="#7c3aed"/>
+        <rect x="10" y="29" width="5" height="2" fill="#1a1a35"/>
+        <rect x="17" y="29" width="5" height="2" fill="#1a1a35"/>
+        <rect x="8" y="14" width="3" height="8" fill="#dc2626" opacity="0.8"/>
+        <rect x="21" y="14" width="3" height="8" fill="#dc2626" opacity="0.8"/>
+      </svg>
+      <div class="char-name">⚔ PIXEL GUIDE</div>
+    </div>
+    <div class="dialog-text" id="dialog-text">
+  <span class="dialog-cursor"></span>
+</div>
+<div class="dialog-next" id="dialog-next" onclick="nextDialog()">
+  ▼ NEXT
+</div>
+
+<button id="page-next" class="page-btn" onclick="goNextPage()">NEXT PAGE</button>
+<button id="home-btn" class="page-btn" onclick="goHome()">HOME</button>
+</div>
+<script src="script.js"></script>
+<audio id="bgm" loop>
+  <source src="files/Pokemon BlueRed - Bicycle Theme.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+</html>
