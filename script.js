@@ -256,7 +256,7 @@ const questData = {
                     System.out.println(acc3.owner + " " + acc3.balance);
                 }
               }`,
-    reflection: "REFLECTION: In this activity, I learned how to analyze the given program and trace the references step by step."
+    reflection: "REFLECTION: In this activity, I learned how to analyze the given program and trace the references step by step. At first, it is hard to analyze since my knowledge in java is not that good yet."
   },
 
   operators: {
@@ -333,7 +333,7 @@ PART 2:
               }
             }
           `,
-    reflection: "REFLECTION: In this activity, i learned how to create a java program and used the specific operator required."
+    reflection: "REFLECTION: In this activity, i learned how to create a java program and used the specific operator required. Now i'm trying to apply some of the OOP concepts that i have learned."
   },
 
   atm: {
@@ -404,7 +404,7 @@ PART 2:
                     }
                   }
                 }`,
-    reflection: "REFLECTION: In this activity, i learned how to create an basic ATM system using switch statement and if-else statement."
+    reflection: "REFLECTION: In this activity, i learned how to create an basic ATM system using switch statement and if-else statement. Doing this is a little bit tricky since we are required to use a while loop."
   },
 
   scholarship: {
@@ -479,7 +479,7 @@ PART 2:
                   input.close();
               }
           }`,
-    reflection: "REFLECTION: In this activity, i tried to integrate some of my learnings such as using if-else, switch and the scanner."
+    reflection: "REFLECTION: In this activity, i tried to integrate some of my learnings such as using if-else, switch and the scanner. In this part, we are required to use scanner to get the users input i didnt had a hard time doing this."
   },
 
   expense: {
@@ -546,7 +546,7 @@ PART 2:
                     input.close();
                   }
                 }`,
-    reflection: "REFLECTION: In this activity, i applied the use of void and non-void method and ofcourse  i applied what i learned in the previous activities."
+    reflection: "REFLECTION: In this activity, i applied the use of void and non-void method and ofcourse  i applied what i learned in the previous activities. I had a hard time doing this because of using the void and non-void method."
   },
 
   seatwork1: {
@@ -628,7 +628,7 @@ PART 2:
                   }	
                 }
               }`,
-    reflection: "REFLECTION: In this seatwork, i created a simple smart wallet menu where i can view valance, cash in and send money. i used while loop, switch case and if-else statement."
+    reflection: "REFLECTION: In this seatwork, i created a simple smart wallet menu where i can view valance, cash in and send money. i used while loop, switch case and if-else statement. Just like some of my past activities, i am basically learning the OOP concepts."
   },
 
   age: {
@@ -667,7 +667,7 @@ PART 2:
                 System.out.println("Category: " + category);
               }	
             }`,
-    reflection: "REFLECTION: In this seatwork, i used a non-void method where i store the if-else statement of age category."
+    reflection: "REFLECTION: In this seatwork, i used a non-void method where i store the if-else statement of age category. Doing this becomes more easy as the day goes by since we're learning more."
   },
 
   quiz1: {
